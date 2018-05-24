@@ -23,11 +23,10 @@ class Review
     private $userRated;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\user", inversedBy="departures")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="id")
      * @ORM\JoinColumn(nullable=false)
      */
     private $reviewAuthor;
-
 
     public function __toString(){
         // Return the site object with "(ID)"* format when __toString is called.
@@ -178,11 +177,11 @@ class Review
     /**
      * Set reviewAuthor
      *
-     * @param \AppBundle\Entity\user $reviewAuthor
+     * @param \AppBundle\Entity\User $reviewAuthor
      *
      * @return Review
      */
-    public function setReviewAuthor(\AppBundle\Entity\user $reviewAuthor)
+    public function setReviewAuthor(\AppBundle\Entity\User $reviewAuthor)
     {
         $this->reviewAuthor = $reviewAuthor;
 
@@ -192,7 +191,7 @@ class Review
     /**
      * Get reviewAuthor
      *
-     * @return \AppBundle\Entity\user
+     * @return \AppBundle\Entity\User
      */
     public function getReviewAuthor()
     {

@@ -3,6 +3,26 @@
 {% block body %}
     <div id="wrapper">
         <div id="container">
+
+            <h1>Routes disponibles :</h1>
+            <ul>
+                <li>
+                    <a href="{{ path('planemodel_index') }}">Voir les avions</a>
+                </li>
+                <li>
+                    <a href="{{ path('reservation_index') }}">Voir les reservations</a>
+                </li>
+                <li>
+                    <a href="{{ path('flight_index') }}">Voir les vols</a>
+                </li>
+                <li>
+                    <a href="{{ path('site_index') }}">Voir les terrains</a>
+                </li>
+                <li>
+                    <a href="{{ path('review_index') }}">Voir les reviews</a>
+                </li>
+            </ul>
+
             <div id="welcome">
                 <h1><span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
             </div>
