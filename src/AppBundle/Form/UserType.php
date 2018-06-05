@@ -5,6 +5,8 @@ namespace AppBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
+
 
 class UserType extends AbstractType
 {
@@ -13,8 +15,16 @@ class UserType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('firstName')->add('lastName')->add('phoneNumber')->add('birthDate')->add('creationDate')->add('note')->add('isCertifiedPilot');
-    }/**
+        $builder->add('firstName')
+                ->add('lastName')
+                ->add('phoneNumber')
+                ->add('birthDate', BirthdayType::class, array(
+                                         'placeholder' => 'Select a value',))
+                ->add('creationDate')
+                ->add('note')
+                ->add('isCertifiedPilot');
+    }
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)

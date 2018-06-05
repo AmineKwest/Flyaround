@@ -57,9 +57,9 @@ class User extends BaseUser
     private $phoneNumber;
 
     /**
-     * @var \Date
+     * @var \DateTime
      *
-     * @ORM\Column(name="birthDate", type="date")
+     * @ORM\Column(name="birthDate", type="datetime")
      */
     private $birthDate;
 
@@ -170,7 +170,7 @@ class User extends BaseUser
     /**
      * Set birthDate
      *
-     * @param \Date $birthDate
+     * @param \DateTime $birthDate
      *
      * @return User
      */
@@ -184,7 +184,7 @@ class User extends BaseUser
     /**
      * Get birthDate
      *
-     * @return \Date
+     * @return \DateTime
      */
     public function getBirthDate()
     {
