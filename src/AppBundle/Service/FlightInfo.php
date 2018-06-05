@@ -54,6 +54,23 @@ class FlightInfo
             }
 
             return $distance;
+
         }
+
+    /**
+     * @param $cruiseSpeed
+     * @param $distance
+     * @return int
+     */
+    public function getTime($cruiseSpeed, $distance)
+    {
+        $time = (string)floor($distance/$cruiseSpeed) . " hours";
+        $minutes = round((($distance/$cruiseSpeed)-floor($distance/$cruiseSpeed))*60);
+        if ($minutes>0)
+        {
+            $time.= " and $minutes minutes";
+        }
+        return $time;
+    }
 
 }
