@@ -70,6 +70,7 @@ class User extends BaseUser
      */
     private $creationDate;
 
+
     /**
      * @var int
      *
