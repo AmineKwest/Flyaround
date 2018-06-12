@@ -66,14 +66,14 @@ class User extends BaseUser
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="creationDate", type="datetime", nullabel=true)
+     * @ORM\Column(name="creationDate", type="datetime", nullable=true)
      */
     private $creationDate;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="note", type="smallint", nullabel=true)
+     * @ORM\Column(name="note", type="smallint", nullable=true)
      */
     private $note;
 
